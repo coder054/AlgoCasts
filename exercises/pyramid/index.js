@@ -14,6 +14,33 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n, numberOfHash = 1) {
+	if (numberOfHash > 2* n - 1) return
+	printOneLine(2 * n - 1, numberOfHash)
+	numberOfHash += 2
+	pyramid(n, numberOfHash)
+
+}
+
+function printOneLine(totalCharacters, numberOfHash) {
+	let numberOfSpaceOneSide = (totalCharacters - numberOfHash) / 2
+	let str = ''
+	for (let i = 0; i < numberOfSpaceOneSide; i++) {
+		str += ' '
+	}
+
+	for (let i = 0; i < numberOfHash; i++) {
+		str += '#'
+	}
+
+
+	for (let i = 0; i < numberOfSpaceOneSide; i++) {
+		str += ' '
+	}
+
+	console.log(str)
+
+}
+
 
 module.exports = pyramid;
