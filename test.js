@@ -1,5 +1,17 @@
-let a = -450
-console.log(a.toString()[1])
+function fizzBuzz(n) {
+	for (let i = 1; i <= n; i++) {
+		if (i % 3 === 0) {
+			if (i % 5 === 0) {
+				console.log('fizzBuzz')
+			} else {
+				console.log('fizz')
+			}
+		} else if (i % 5 === 0) {
+			console.log('buzz')
+		} else {
+			console.log(i)
+		}
+	}
+}
 
-let b = '-022'
-console.log(parseInt(b))
+fizzBuzz(8)
