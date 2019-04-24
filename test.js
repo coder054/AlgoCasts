@@ -1,17 +1,10 @@
-function fizzBuzz(n) {
-	for (let i = 1; i <= n; i++) {
-		if (i % 3 === 0) {
-			if (i % 5 === 0) {
-				console.log('fizzBuzz')
-			} else {
-				console.log('fizz')
-			}
-		} else if (i % 5 === 0) {
-			console.log('buzz')
-		} else {
-			console.log(i)
-		}
+function x(str) {
+	let newstr = str.replace(/[^\w]/g, '').toLowerCase()
+	let chars = {}
+	for (let char of newstr) {
+		chars[char] = chars[char] + 1 || 1
 	}
+	return chars
 }
 
-fizzBuzz(8)
+console.log(x('RAIL! SAFETY!'))
