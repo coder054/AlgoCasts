@@ -18,22 +18,43 @@
 //       '####'
 
 function steps(n, numberOfHash = 1) {
-  if(numberOfHash > n) return
-  printOneLine(n, numberOfHash)
+  if (numberOfHash > n) return
+  printOneLine(numberOfHash, n - numberOfHash)
   numberOfHash++
   steps(n, numberOfHash)
 }
 
-function printOneLine(totalCharacters, numberOfHash){
-  let numberOfSpace = totalCharacters - numberOfHash
+function printOneLine(numberOfHash, numberOfSpace) {
   let str = ''
-  for(let i = 0; i < numberOfHash; i++){
+  for (let i = 0; i < numberOfHash; i++) {
     str += '#'
   }
-  for(let i = 0; i < numberOfSpace; i++){
+  for (let i = 0; i < numberOfSpace; i++) {
     str += ' '
   }
+
   console.log(str)
 }
 
-module.exports = steps;
+////////////////////////////////////////////////
+/// using for loop solution
+// function steps(n, numberOfHash = 1) {
+//   for (let i = 0; i < n; i++) {
+//     printOneLine(i + 1, n - i - 1)
+//   }
+// }
+
+// function printOneLine(numberOfHash, numberOfSpace) {
+//   let str = ''
+//   for (let i = 0; i < numberOfHash; i++) {
+//     str += '#'
+//   }
+//   for (let i = 0; i < numberOfSpace; i++) {
+//     str += ' '
+//   }
+
+//   console.log(str)
+// }
+// ///////////////////////////////////////////
+
+module.exports = steps
