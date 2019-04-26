@@ -38,7 +38,7 @@ function printOneLine(numberOfHash, numberOfSpace) {
 
 ////////////////////////////////////////////////
 /// using for loop solution
-// function steps(n, numberOfHash = 1) {
+// function steps(n) {
 //   for (let i = 0; i < n; i++) {
 //     printOneLine(i + 1, n - i - 1)
 //   }
@@ -56,5 +56,21 @@ function printOneLine(numberOfHash, numberOfSpace) {
 //   console.log(str)
 // }
 // ///////////////////////////////////////////
+
+/////////////////////////////////////
+// another solution
+// for (let row = 0; row < n; row++) {
+//   let stair = ''
+//   for (let column = 0; column < n; column++) {
+//     if (column > row) {
+//       stair += ' '
+//     } else {
+//       stair += '#'
+//     }
+//   }
+//   console.log(stair)
+// }
+
+////////////////////////////////////
 
 module.exports = steps
