@@ -83,6 +83,8 @@
 // 	}
 // 	return arr
 // }
+const a = []
+console.log(a[a.length - 1])
 
 function matrix(n) {
 	let results = []
