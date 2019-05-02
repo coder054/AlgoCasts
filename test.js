@@ -1,11 +1,6 @@
-function f() {
-	let count = 0
-	while (count <= 10) {
-		console.log(count)
-		count++
-	}
-	console.log('out of while loop')
-	return count
-}
+let a = [1, 2, 3]
+let b = [99, 100, 101]
 
-console.log(f())
+console.log(a.unshift(...b))
+console.log(a)
+
